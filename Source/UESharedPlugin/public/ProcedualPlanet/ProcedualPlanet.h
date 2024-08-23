@@ -30,14 +30,14 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	FPolymesh& GetMeshData() { return m_mesh; }
 
-	TAssetPtr<UMaterial> GetBiomeMaterial(bool isHexagon=true) { if (isHexagon) return m_materialHexagon; else return m_materialPentagon; }
+	TSoftObjectPtr<UMaterial> GetBiomeMaterial(bool isHexagon=true) { if (isHexagon) return m_materialHexagon; else return m_materialPentagon; }
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Planet,meta = (DisplayName = "level"))
 		int32 m_level;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Planet, meta = (DisplayName = "Pentagon material"))
-		TAssetPtr<UMaterial> m_materialPentagon;
+	TSoftObjectPtr<UMaterial> m_materialPentagon;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Planet, meta = (DisplayName = "Hexagon material"))
-		TAssetPtr<UMaterial> m_materialHexagon;
+	TSoftObjectPtr<UMaterial> m_materialHexagon;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Planet, meta = (DisplayName = "show index"))
 		int32 m_showindex;

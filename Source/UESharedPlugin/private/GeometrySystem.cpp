@@ -6,8 +6,8 @@ FPolymesh FGeometrySystem::GetIcosahedronMuiltFour(bool dual, int level)
 {
 	FPolymesh mesh;
 	TArray<VertexHandle>  vhandles;
-	float m = FMath::Sqrt(50 - 10 * FMath::Sqrt(5)) / 10;
-	float n = FMath::Sqrt(50 + 10 * FMath::Sqrt(5)) / 10;
+	float m = FMath::Sqrt(50 - 10 * FMath::Sqrt(5.0)) / 10;
+	float n = FMath::Sqrt(50 + 10 * FMath::Sqrt(5.0)) / 10;
 	float vertexes[] = { m, 0, n, m,0,-n, -m,0,n, -m,0,-n
 	,0, n, m,0, -n, m,0, n, -m,0, -n, -m
 	,n, m, 0,-n, m, 0,n, -m, 0,-n, -m, 0 };
